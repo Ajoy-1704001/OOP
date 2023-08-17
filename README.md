@@ -66,7 +66,7 @@ class BankAccount{
     }
 }
 ```
-So this is the class that we have already in the bank. We want to create another class called SuperSaver. So to avoid redundant code, we can simply inherit the class from the BankAccount class. To inherit a class, we use **extends"" keyword with the derived class and then the parent class name comes;
+So this is the class that we have already in the bank. We want to create another class called SuperSaver. So to avoid redundant code, we can simply inherit the class from the BankAccount class. To inherit a class, we use **extends** keyword with the derived class and then the parent class name comes;
 
 ```java
 class SuperSaver extends BankAccount{
@@ -134,5 +134,41 @@ public class Oop {
   }
 }
 ```
-**Hierarchical Inheritance:**
+**Hierarchical Inheritance:** When more than one class inherits from the base/parent class, that is called Hierarchical Inheritance. That means, multiple class can extend the base class for it's own purpose.
 
+Example:
+```java
+class Mobile{
+    private String brand;
+
+    public void setName(String brand) {
+        this.brand = brand;
+    }
+}
+
+class Iphone extends Mobile{
+    public Iphone(){}
+    // Other attributes and methods
+}
+
+class Pixel extends Mobile{
+    public Pixel(){}
+    // Other attributes and methods
+}
+
+class MobileOOP {
+    public static void main(String[] args) {
+        Iphone iphone = new Iphone();
+        Pixel pixel = new Pixel();
+
+        iphone.setName("Apple");
+        pixel.setName("Google");
+    }
+}
+```
+Here, both **Iphone** and **Pixel** inherits setName() method from **Mobile** class.
+
+**Multiple Inheritance:** Sometimes, we need to inherit data members and methods from multiple classes. So, derived class may have multiple parent class. This is called Multiple Inheritance. Java doesn't support multiple inheritance because of ambiguity problem. Suppose, we have two class named **Software** and **Hardware**. Both of the classes have a public method named **connect()**. Now we want to derive a new class named **Embedded** from Software and Hardware class which will inherit the **connect()** method. But, the problem is, java compiler can't figure out which **connect()** method it should inherit. This is the ambiguity problem. To overcome this problem, we generally use **interface**.
+>**Important** How interface support multiple inheritance? The answer is: Regular classes generally implements the method within the class body. In case of interface, the method implementation is provided by the implementation class (that class which is implementing the interface). That's why there is no ambiguity in case of performing a specific method as each class has it's own implementation.
+
+Example:
