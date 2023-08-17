@@ -172,3 +172,44 @@ Here, both **Iphone** and **Pixel** inherits setName() method from **Mobile** cl
 >**Important** How interface support multiple inheritance? The answer is: Regular classes generally implements the method within the class body. In case of interface, the method implementation is provided by the implementation class (that class which is implementing the interface). That's why there is no ambiguity in case of performing a specific method as each class has it's own implementation.
 
 Example:
+```java
+interface Software{
+    //other methods
+    default void test(){   //// Only default and static methods can have implementation details inside an interface
+        System.out.println("Testing.....");
+    }
+    public void connect();
+}
+
+interface Hardware{
+    default void verify(){  
+        System.out.println("Verifying.....");
+    }
+    public void connect();
+}
+
+class Embedded implements Software,Hardware{
+    public void connect(){
+        System.out.println("Software connected successfully");
+    }
+}
+```
+We have declared two interfaces and inherited **connect()** method inside the **Embedded** class. Only default and static members can have the full implementation inside the interface. Other public/private method should be abstract, that means no implementation details. Here is the main function:
+```java
+public class Multiple {
+    public static void main(String[] args) {
+        Embedded embedded = new Embedded();
+        embedded.connect();
+        embedded.test();
+        embedded.verify();
+    }
+}
+```
+>**Output:** ```Software connected successfully
+Testing.....
+Verifying.....```
+
+**Hybrid Inheritance:** This is actually the combination of both the multiple and multi-level inheritance. This is also not supported by java because of ambiguity (diamond problem).
+
+### Abstraction
+
