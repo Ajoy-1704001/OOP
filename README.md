@@ -39,4 +39,99 @@ public class Human {
     } 
 }
 ```
+In this case, we can't directly access any data member from other classes. We must use public methods(for above example, getter/setter) if want any specific data. Another example: NSL have some confidential employee data which you want to access. As per rule, you can't access the data directly. You must get it through any of the official persons. So these official person working here as a public methods.
+
+### Inheritance
+Sometimes we want to create a class which should have some common attributes. In this case, we may write the common things again and again for the same class. Example: I have an account in a bank. Now I want to open a Super Saver Account. Those two account may vary by some advantages and functionality, but both need some common information like my name, mobile no, gender, nid no etc. So to model these account in object oriented programming, we have a feature called inheritence. Example:
+```java
+class BankAccount{
+    private String name;
+    private String accountNumber;
+    private int balance;
+
+    public BankAccount(){
+        name = "Ajoy";
+        accountNumber = "0012-12111212";
+        balance = 2000;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    public int getBalance() {
+        return balance;
+    }
+}
+```
+So this is the class that we have already in the bank. We want to create another class called SuperSaver. So to avoid redundant code, we can simply inherit the class from the BankAccount class. To inherit a class, we use **extends"" keyword with the derived class and then the parent class name comes;
+
+```java
+class SuperSaver extends BankAccount{
+    private int year;
+
+    public SuperSaver(int y){
+        year = y;
+    }
+
+    public String getInformation(){
+        return getName()+", "+getAccountNumber();
+    }
+}
+public static void main(String[] args) {
+    SuperSaver sAccount = new SuperSaver(10);
+    System.out.println(sAccount.getInformation());
+}
+```
+As we can see, **SuperSaver** class inherited the public members of BankAccount class. So, SuperSaver Account is the derived/child class and **BankAccount** is the Base class/Parent class. Only public and protected data members and methods can be inherited. Private methods are not allowed to inherit from base class.
+
+There are generally 5 types of Inheritance. Such as:
+1. Single Inheritance
+2. Multi-level Inheritance
+3. Hierarchical Inheritance
+4. Multiple Inheritance
+5. Hybrid Inheritance
+
+We have already discussed the concept of single inheritance in the above code.
+**Multi-level Inheritance:** Suppose, we have a Iphone class which is our parent class. From Iphone class, we derive another class called Iphone14. From class Iphone14, we can derive class Iphone15 and so on. So this is called multi-level inheritance.
+Example:
+```java
+class Iphone {   //base class
+  private int version;
+  public void setVersion(int version) {
+    this.version=version;
+  }
+
+  public int getVersion(){
+    return version;
+  }  
+}
+
+class Iphone14 extends Iphone { // Derived from Iphone class
+  public void feature(){
+    System.out.println("This phone has dynamic island feature.");
+  }
+} 
+
+class Iphone15 extends Iphone14 {// Derived from Iphone14
+  public void printVersion(){
+    System.out.println("This is Iphone "+getVersion()); 
+  } 
+}
+```
+So now, we can create a object of Iphone15 and which have the priviliege of both getVersion() of **Iphone** class and feature() of **Iphone14** class. Here is the main function:
+
+```java
+public class Oop {
+  public static void main(String[] args) {
+    Iphone15 iphone = new Iphone15(); 
+    iphone.setVersion(15);
+    iphone.feature();
+    iphone.printVersion();
+  }
+}
+```
+**Hierarchical Inheritance:**
 
