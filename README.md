@@ -9,7 +9,7 @@ If class is the defination of our model, then objects are the instance of the mo
 ### Encapsulation
 Let's think about a capsule. It is a unit which contains and binds all of it's important elements. We don't know the inside material of it. In OOP, we can think class as a capsule which binds data members and methods together so that we can control the access right of the data members. When we encapsulate a class, objects of other class needs special requirement to access the data. That special requirement depends on the access modifier. By convention, we use private access modifier for data members so that objects from other class can't access it.
 Example:
-'''java
+```java
 public class Human {
     private String name;
     private int age;
@@ -38,5 +38,5 @@ public class Human {
         this.age = age;
     } 
 }
-'''
+```
 
