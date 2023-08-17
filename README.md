@@ -212,4 +212,34 @@ Verifying.....```
 **Hybrid Inheritance:** This is actually the combination of both the multiple and multi-level inheritance. This is also not supported by java because of ambiguity (diamond problem).
 
 ### Abstraction
+Suppose, we want to provide a button to user which increase the brightness of the device. User only know that the button increases brightness. But, they don't know how it actually worked in the background. Because, we don't want user to know what is behind the functionality. This is known as Abstraction. Example: In Java, List, Math, Stack, etc. are Abstract Data Type.
+```java
+Math.sqrt(25);
+```
+We know the work of the sqrt() function. But don't know the actual implementation details. Abstraction can be achieved by both abstract types and interface. We have already discussed about interface. 
+
+We must use **abstract** keyword for declaring abstract classes or methods. Abstract classes can not be initiated. They must be inherited from other class.
+Example:
+```java
+abstract class Mobile{
+    public abstract void play();
+    public void close(){
+        System.out.println("System is shutting down.");
+    }
+}
+
+class Pixel extends Mobile{
+    public void play(){
+        System.out.println("Welcome to Pixel!!!");
+    }
+}
+public class Abstraction {
+    public static void main(String[] args) {
+        Mobile mobile = new Pixel();
+        mobile.play();
+        mobile.close();
+    }
+}
+```
+
 
