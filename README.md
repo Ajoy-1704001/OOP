@@ -94,7 +94,8 @@ There are generally 5 types of Inheritance. Such as:
 4. Multiple Inheritance
 5. Hybrid Inheritance
 
-We have already discussed the concept of single inheritance in the above code.
+We have already discussed the concept of **single inheritance** in the above code.
+
 **Multi-level Inheritance:** Suppose, we have a Iphone class which is our parent class. From Iphone class, we derive another class called Iphone14. From class Iphone14, we can derive class Iphone15 and so on. So this is called multi-level inheritance.
 Example:
 ```java
