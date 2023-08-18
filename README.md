@@ -5,7 +5,57 @@ Object Oriented Programming(OOP) is a programming paradigm that can model real w
 Class can be think as a blueprint or building block. It consists of data members and some functions. Example: Human can be considered as a class which have attributes like name, age, hair color etc. and functionalities are walking, sleeping, eating etc. As said before, we can model anything around us using object oriented programing.
 If class is the defination of our model, then objects are the instance of the model. Objects are physical entity that contains data attribute and it's own functionality. Object needs class to follow the blueprint. When we create an instance of the object, it occupies some memory. Without creating object, class is useless. Example: We all are the objects of human class. Like I have my own name, age, hair color etc. and I can also perform several tasks.
 
-## Fundamental Features of OOP
+### Access Modifiers
+In java, there are some modifier tags which is used to impose restrictions on data member and methods. They are **Private**, **Public**, **Protected** and **Default**.
+
+**Private:** A private member can't be directly access outside the class. It is used to hide class members from other classes. Example:
+```java
+class Mobile{
+    private int buildVersion;
+    public Mobile(int version){
+        buildVersion = version;
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Mobile mobile = new Mobile(5);
+        System.out.println(mobile.buildVersion); //Error: Can't access the buildVersion
+    }
+}
+```
+So, in this case, we can't access the variable **buildVersion** outside the class.
+
+**Public:** A public member can be access directly by anything which is in the same scope as the class object. The above code will compile and run successfully if we declare the **buildVersion** variable as public.
+
+**Protected:** Protected members have package level access. That means, we can't access a protected member of any class if the class is not defined in the same package scope. But if we inherit the class, then we can acess it through derived class from any package. Example:
+```java
+package mobile;
+public class Iphone {
+  private int version;
+  public int getVersion(){
+    return version;  
+  }
+  protected void display(){
+    System.out.println("welcome!");
+  }
+}
+```
+```java
+package hardware;  
+import mobile.*; 
+class Hardware{  
+  public static void main(String args[]){  
+   Iphone obj = new Iphone();  
+   obj.display();     //Compile Time Error  
+  }  
+} 
+```
+Here, we can see that protected member **display()** from package mobile can not be accessed in package hardware.
+
+**Default:** If we do not declare any access modifier, then it is considered as default modifier. It has similarity with protected modifier, but it can't be accessed through inherited class. 
+
+
+## Fundamental Principle of OOP
 ### Encapsulation
 Let's think about a capsule. It is a unit which contains and binds all of it's important elements. We don't know the inside material of it. In OOP, we can think class as a capsule which binds data members and methods together so that we can control the access right of the data members. When we encapsulate a class, objects of other class needs special requirement to access the data. That special requirement depends on the access modifier. By convention, we use private access modifier for data members so that objects from other class can't access it.
 Example:
