@@ -216,7 +216,7 @@ class MobileOOP {
     }
 }
 ```
-Here, both **Iphone** and **Pixel** inherits setName() method from **Mobile** class.
+Here, both **Iphone** and **Pixel** inherit setName() method from **Mobile** class.
 
 **Multiple Inheritance:** Sometimes, we need to inherit data members and methods from multiple classes. So, derived class may have multiple parent class. This is called Multiple Inheritance. Java doesn't support multiple inheritance because of ambiguity problem. Suppose, we have two class named **Software** and **Hardware**. Both of the classes have a public method named **connect()**. Now we want to derive a new class named **Embedded** from Software and Hardware class which will inherit the **connect()** method. But, the problem is, java compiler can't figure out which **connect()** method it should inherit. This is the ambiguity problem. To overcome this problem, we generally use **interface**.
 >**Important** How interface support multiple inheritance? The answer is: Regular classes generally implements the method within the class body. In case of interface, the method implementation is provided by the implementation class (that class which is implementing the interface). That's why there is no ambiguity in case of performing a specific method as each class has it's own implementation.
