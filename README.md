@@ -273,7 +273,36 @@ class Iphone extends Chip{
     }
 }
 ```
+Interface class can not have it's own object like abstract class. Regular and abstract classes can implement interfaces (even more than one). If the subclass is regular class, then it is a must to implement all the methods inside subclass. If the subclass is abstract class, then it is not mandatory to implement all the methods. The other subclass that inherits the abstract class, it's his duty to implement all the methods. Interface can't have constructor and methods can't be declared as private. Interface can also have static or default methods with it's implementation. Interface can have static/constant attributes.
+Example: (Using Interface)
+```java
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Welcome to Online IDE!! Happy Coding :)");
+        Chip device = new Iphone();
+        device.play();
+        device.stop();
+    }
+}
 
+interface Chip{
+    public void play();
+    public void waiting();
+    public default void stop(){
+        System.out.println("Bye!");
+    }
+}
+
+class Iphone implements Chip{
+    public void play(){
+        System.out.println("Welcome!");
+    }
+    public void waiting(){
+        System.out.println("waiting!");
+    }
+}
+```
 
 
 
