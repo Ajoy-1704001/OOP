@@ -242,6 +242,39 @@ public class Abstraction {
 }
 ```
 
-## Difference between Abstract class and Interface
+### Difference between Abstract class and Interface
+Abstract class is a class that can not have it's own object, but it can be inherited by other concrete classes and those subclass can have their object. If the subclass is a regular class, then we must implement all the abstract methods. Otherwise, it will generate compilation error. If the subclass is also an abstract class, then there is no need to implement all the abstract methods. Abstract class can have non-abstract methods and their body implementation. Abstract class can also have constructor. As abstract class can contain both abstract and regular methods, we can not achieve 100% abstraction using abstraction.
+Example: (Using Abstract class)
+```java
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Welcome to Online IDE!! Happy Coding :)");
+        Chip device = new Iphone();
+        device.play();
+        device.stop();
+    }
+}
+
+abstract class Chip{
+    public abstract void play();
+    public abstract void waiting();
+    public void stop(){
+        System.out.println("Bye!");
+    }
+}
+
+class Iphone extends Chip{
+    public void play(){
+        System.out.println("Welcome!");
+    }
+    public void waiting(){
+        System.out.println("waiting!");
+    }
+}
+```
+
+
+
 
 
