@@ -218,7 +218,7 @@ Math.sqrt(25);
 ```
 We know the work of the sqrt() function. But don't know the actual implementation details. Abstraction can be achieved by both abstract types and interface. We have already discussed about interface. 
 
-We must use **abstract** keyword for declaring abstract classes or methods. Abstract classes can not be initiated. They must be inherited from other class.
+We must use **abstract** keyword for declaring abstract classes or methods. Abstract classes can not be instantiated. They must be inherited from other class.
 Example:
 ```java
 abstract class Mobile{
