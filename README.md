@@ -307,6 +307,7 @@ class Iphone implements Chip{
 When same object shows different forms and behaviour, we refer this as polymorphism. What happens if one of the methods of derived class needs different type of implementation rather than the one mentioned in the parent class? Polymorphism allows us to write multiple definitions of a method. This improves code readabilty and inheritance allows code reusability. Polymorphism are of two types:
 1. Static Polymorphism
 2. Dynamic Polymorphism
+
 Example: We have "Mobile" class and two derived class such as "Iphone" and "Pixel". "Mobile" class contains a method "showMessage()" which is inherited by both the derived classes. But each of the derived class have different message to show. So, they overrides the message.
 ```java
 class Mobile{
@@ -344,6 +345,27 @@ public class Main
 So, this is how function overriding works. This is the example of Dynamic polymorphism. Dynamic polymorphism is also known as runtime polymorphism as compiler detects the overriden method in runtime.
 Sometimes, we use same name for different methods which performs quite similar task. That increases code reusability and saves memory. This is known as method overloading or static polymorphism or compile time polymorphism. As the functions are same with different parameters or return type, compiler can easily detect it during compile time. Example: We want to update an existing feature in our class "Iphone". So, to avoid unnecessary modification in the function, we can simply overload the fucntion, and  write our code. Example:
 
-
+```java
+class Iphone{
+    public void takePicture(double depth){ //old method
+        //other functionality
+        System.out.println("Taking picture!!! depth:" + depth);
+    }
+    public void takePicture(double depth, int brightness){ //new method
+        //other functionality
+        System.out.println("Taking picture!!! depth:" + depth+" , brightness:"+brightness+"%");
+    }
+}
+public class Main
+{
+    public static void main(String[] args) {
+        Iphone iphone = new Iphone();
+        iphone.takePicture(3.5);
+        
+        iphone.takePicture(3.5,90);
+    }
+}
+```
+So, we can see that, takePicture(parameters) function is overloaded. This is method of static polymorphism.
 
 
