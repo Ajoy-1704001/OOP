@@ -106,8 +106,6 @@ public class Main {
 
         mobile1.showStartUpMessage();
         mobile2.showStartUpMessage();
-
-        mobile1.play();
     }
 }
 ```
