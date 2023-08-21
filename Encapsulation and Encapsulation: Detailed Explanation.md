@@ -53,21 +53,13 @@ class Iphone{
 Using these public methods, we can access the data members.
 
 ## Abstraction
+Abstraction in Object-Oriented Programming refers to showing only the essential features of an object to the user and hiding the inner details to reduce complexity. Sounds similar to the concept of Encapsulation, right? Let's go through some example.
+
+Example: An UI designer designs an interface which contains three buttons which have unique functionality. As a user, I know what these three buttons do which I have learned from the UI designer. The developers know what is the logic behind those three working buttons. So, the main point is that UI designer is providing us the abstract view where Implementation details are hidden. The abstract view is representing **What it does** and hides **How it does**. Only developers know how the inner workings are done. This is what Abstraction is all about.
+
+But as we know, developer must need tools, database(username, password) etc. for performing the inner workings. And, for system security, developers want to hide the required information to perform the inner workings. So, here comes the concept of encapsulation. Developer represents **How it does**, but hides **what does it uses to implement**(i.e: database password, enviroment variables etc.).
 
 ```java
-public class Main {
-    public static void main(String[] args) {
-        Mobile mobile1 = new Iphone("Iphone", 14);
-        Mobile mobile2 = new Pixel("Pixel", 6);
-
-        mobile1.showStartUpMessage();
-        mobile2.showStartUpMessage();
-
-        mobile1.play();
-    }
-    
-}
-
 abstract class Mobile{
     public abstract void showStartUpMessage();
     public void call(String number){
@@ -90,6 +82,7 @@ class Iphone extends Mobile{
         System.out.println("Welcome to "+brandName+" "+version);
     }
 }
+
 class Pixel extends Mobile{
     private String brandName;
     private long version;
@@ -105,6 +98,24 @@ class Pixel extends Mobile{
         System.out.println("Welcome to "+brandName+" "+version);
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        Mobile mobile1 = new Iphone("Iphone", 14);
+        Mobile mobile2 = new Pixel("Pixel", 6);
+
+        mobile1.showStartUpMessage();
+        mobile2.showStartUpMessage();
+
+        mobile1.play();
+    }
+}
 ```
+The above code shows **Mobile** is an abstract class which has an abstract method **showStartUpMessage()**. In the Main class, user only know about the **Mobile** class and it's methods. They don't know how the methods are implemented by the derived classes. This is known as Abstraction.
+
+On the other hand, **Pixel** and **Iphone** class both have implemented the **showStartUpMessage()** function and restricted the **brandName** and **version** from access outside access. This concept is known as Encapsulation.
+
+So, the conclusion is Encapsulation hides object details by controlling access and Abstraction creates higher level abstract view for user to tell what the object does.
+
 
 
