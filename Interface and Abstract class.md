@@ -29,7 +29,7 @@ class Pixel extends Mobile{
     }
 }
 ```
-From above code example, we can see that an abstract class can contain both the abstract and non-abstract class. Moreover, Abstract can also have constructor. So, if we want to initialize the member(if any) of abstract class before the instantiation of a subclass actually takes place, we must invoke the constructor of abstract class in subclass. Suppose, our abstract class have some fields which are non-finals, non-static which need some initialization. As abstract class can't be instantiated but it's data member can be initialized using the constructor which will be common for all the subclasses. Example:
+From above code example, we can see that an abstract class can contain both the abstract and non-abstract class. Moreover, Abstract can also have constructor. So, if we want to initialize the member(if any) of abstract class before the instantiation of a subclass actually takes place, we must invoke the constructor of abstract class in subclass. Suppose, our abstract class have some fields which are non-finals, non-static which need some initialization. Abstract class can't be instantiated but it's data member can be initialized using the constructor which will be common for all the subclasses. Example:
 ```java
 public class Main
 {
