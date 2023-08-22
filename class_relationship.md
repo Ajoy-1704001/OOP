@@ -135,7 +135,56 @@ The output is:
 >Employee [name=Ajoy, team=Team [teamName=Software]]
 >Team [teamName=Software]
 
+### Composition
+Composition follows **Part-Of** relationship. In this case, Owner class owns the other class object. Suppose, Class A owns the object of class B. So, object of B will only be created when object of A is created. So, what's the difference between Aggregation and Composition? Mainly, In aggregation, we use the reference of the object in case of creating a relation. On the other hand, owned objects are created inside the owner class which results interdependency. Owned objects will be deleted if the object of owner class gets destroyed.
+```java
+public class Composition {
+    public static void main(String[] args) {
+    Mobile mobile = new Mobile("Iphone", 4000, "A15");
+    mobile.printDetails();
+  }
+}
+class Chip {
+    private String version;
 
+    public Chip(String version) {
+    this.version = version;
+    }
 
+    public String getVersion() {
+        return version;
+    }
+}
 
+class Battery {
+  
+    private long power;
+
+    public Battery(long power) {
+        this.power = power;
+    }
+  
+    public void batteryCapacity(){
+        System.out.println("Battery Capacity:"+power);
+    }
+}
+
+class Mobile {
+    private String brandname;
+    private Battery battery;
+    private Chip chip;
+    public Mobile(String brandname, long power, String chipVersion) {
+        this.brandname = brandname;
+        this.battery = new Battery(power);
+        this.chip = new Chip(chipVersion);
+    }
+
+    public void printDetails(){
+        System.out.println("Mobile Brand Name: "+brandname);
+         System.out.println("Chip: "+chip.getVersion());
+        battery.batteryCapacity();
+    }
+}
+```
+Here, we can see that we are creating the Battery and Chip objects inside the Mobile class. If, Mobile dies, other inside objects will be also dead.
 
