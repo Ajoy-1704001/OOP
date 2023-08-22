@@ -137,7 +137,7 @@ The output is:
 >Team [teamName=Software]
 
 ### Composition
-Composition follows **Part-Of** relationship. In this case, Owner class owns the other class object. Suppose, Class A owns the object of class B. So, object of B will only be created when object of A is created. So, what's the difference between Aggregation and Composition? Mainly, In aggregation, we use the reference of the object in case of creating a relation. On the other hand, owned objects are created inside the owner class which results interdependency. Owned objects will be deleted if the object of owner class gets destroyed.
+Composition follows **Part-Of** relationship. In this case, Owner class owns the other class object. Suppose, Class A owns the object of class B. So, object of B will only be created when object of A is created. So, what's the difference between Aggregation and Composition? Mainly, In aggregation, we use the reference of the object in case of creating a relation. On the other hand, In composition, owned objects are created inside the owner class which results interdependency. Owned objects will be deleted if the object of owner class gets destroyed.
 ```java
 public class Composition {
     public static void main(String[] args) {
@@ -187,5 +187,5 @@ class Mobile {
     }
 }
 ```
-Here, we can see that we are creating the Battery and Chip objects inside the Mobile class. If, Mobile dies, other inside objects will be also dead.
+Here, we can see that we are creating the Battery and Chip objects inside the Mobile class(Owner). If, Mobile dies, other inside objects will be also dead.
 
