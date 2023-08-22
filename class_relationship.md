@@ -134,7 +134,10 @@ class Employee {
 ```
 The output is:
 >Employee [name=Ajoy, team=Team [teamName=Software]]
+
 >Team [teamName=Software]
+
+Using Aggregation, we can achieve more loose coupling code than Composition.
 
 ### Composition
 Composition follows **Part-Of** relationship. In this case, Owner class owns the other class object. Suppose, Class A owns the object of class B. So, object of B will only be created when object of A is created. So, what's the difference between Aggregation and Composition? Mainly, In aggregation, we use the reference of the object in case of creating a relation. On the other hand, In composition, owned objects are created inside the owner class which results interdependency. Owned objects will be deleted if the object of owner class gets destroyed.
