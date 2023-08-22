@@ -39,7 +39,7 @@ class Main{
   }
 }
 ```
-Along with code reusabilty, we can achieve another benefit. Suppose, we eant to extend the functionality of a class by creating a subclass that inherits its properties and methods. But, now we want to update or modify an existing feature without changing the main codebase. So, Using Inheritance promotes flexibility and adaptability in our code, as we can easily modify the behavior of objects without modifying the parent class.
+Along with code reusabilty, we can achieve another benefit called extensibility. Suppose, we eant to extend the functionality of a class by creating a subclass that inherits its properties and methods. But, now we want to update or modify an existing feature without changing the main codebase. So, Using Inheritance promotes flexibility and adaptability in our code, as we can easily modify the behavior of objects without modifying the parent class.
 Example:
 ```java
 class SuperSaver extends BankAccount{
