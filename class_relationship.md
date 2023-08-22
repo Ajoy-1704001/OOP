@@ -14,7 +14,8 @@ Let, **Class A** and **class B** have a has-a relationship if one or both need t
 ### Part-Of Relation
 Suppose, we have an **Mobile** and we need **Chip**,**Battery** and **Storage**. So, **Chip**,**Battery** and **Storage** are part of **Mobile**. So, the components will be only available when we have the **Mobile**. And also **Mobile** is dependent on the components. So, we can see there is interdependency between Mobile and other components.
 
-<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/f65a505f-1061-40af-b11f-45b8b40064b4" width=50% height=50%>
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/6a68e663-e8a1-491e-adbb-be52e2b6e9ef" width=50% height=60%>
+
 
 ## Association
 
