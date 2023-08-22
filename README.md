@@ -384,10 +384,10 @@ class Pixel extends Mobile{
 public class Main
 {
     public static void main(String[] args) {
-        Iphone iphone = new Iphone();
+        Mobile iphone = new Iphone();
         iphone.showMessage();
         
-        Pixel pixel = new Pixel();
+        Mobile pixel = new Pixel();
         pixel.showMessage();
     }
 }
