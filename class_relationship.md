@@ -4,6 +4,6 @@ Class relationship refers to relation between two or more classes. Relationships
 ### Is-A Relation
 When one class is a type of another class and can inherit the common attributes, that is know as **Is-A** relation. Example: **Iphone** is a **Mobile**. But we can't say, Mobile is a Iphone. Another example can be: Cow is an Animal. But "An animal is a cow" can't be possible since all animals are not cow. So, from this we can understand that **Is-A** relation is unidirectional. We can represent Is-A relaton simply by an unidirectional arrow.
 
-<img src="[https://your-image-url.type](https://github.com/Ajoy-1704001/OOP/assets/57573642/30666ec8-7e8c-4346-8cbf-3b6c6a7269fc)" width="100">
+<img src="[https://your-image-url.type](https://github.com/Ajoy-1704001/OOP/assets/57573642/30666ec8-7e8c-4346-8cbf-3b6c6a7269fc)" width="100" height="100">
 
 ### Has-A Realtion
