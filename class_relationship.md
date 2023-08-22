@@ -6,7 +6,7 @@ When one class is a type of another class and can inherit the common attributes,
 
 <img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/30666ec8-7e8c-4346-8cbf-3b6c6a7269fc" width=50% height=50%>
 
-### Has-A Realtion
+### Has-A Relation
 Let, **Class A** and **class B** have a has-a relationship if one or both need the other’s object to perform an operation, but both class objects can exist independently of each other. This is actually a one way ownership. Example: **Student** has an **Address**. But, it is not neccesary that each address contains a student. So, here **Student** is the owner entity. Student class owns the Address Object. So, arrow will be towards the owner entity and arrow head will be a diamond shape.
 
 <img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/ccfd6c69-89ba-411d-a75f-0b6fba7a5864" width=50% height=50%>
