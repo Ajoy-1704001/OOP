@@ -798,6 +798,8 @@ Suppose, we have an **Mobile** and we need **Chip**,**Battery** and **Storage**.
 
 Association is a relation between two separate classes through their Objects. Association is the common term used for both the **has-a** and **part-of** relationships but is not limited to these. Association relationship can be one to one, One to many, many to one and many to many. Suppose, we have a **Teacher** class and **Student** class. A single student can associate with multiple teachers and a teacher can handle multiple students. And also both the student and teacher can be independent. Again, A person can one national id card. This is also falls under association relationship. So, it can be both unidirectional and bidirectional.
 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/1578d7ce-c522-4a46-9978-d2542d6b0606" width=50% height=50%>
+
 Example:
 ```java
 import java.util.ArrayList;
