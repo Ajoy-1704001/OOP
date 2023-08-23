@@ -66,7 +66,7 @@ Here, we can see that protected member **display()** from package mobile can not
 ## Fundamental Principle of OOP
 ### Encapsulation
 
-<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/11fbd334-84d9-4163-af4d-e584598bb0b7" width=50% height=50%> 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/11fbd334-84d9-4163-af4d-e584598bb0b7" width=40% height=40%> 
 
 >Image Reference: [Educative](https://www.educative.io/) 
 
