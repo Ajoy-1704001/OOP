@@ -234,10 +234,10 @@ So, we can see that having constructor in abstract class, we can avoid redundanc
 Moreover, Abstraction can't be used for multiple inheritance, because we can't extend multiple abstract classes at a time as it wll still create ambiguity due to the other concrete classes. Additionally, all abstract method must be implemented in subclass unless the subclass is abstract. 
 
 ### - When to use Interface
-Interface are more likely to hide unneccessary details and only show the important details of an object. Due to the advancement of java, now-a-days, interface can also have default methods. But most of the cases, interface is used as a contract that have to be fulfilled in implementing classes. Moreover, Interface is used for achieving multiple inheritance in java as we can implement multiple interface separated by comma.
 
 <img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/a8452f81-a271-45c3-8397-d9dd4a263ec7" width=30% height=30%> 
 
+Interface are more likely to hide unneccessary details and only show the important details of an object. Due to the advancement of java, now-a-days, interface can also have default methods. But most of the cases, interface is used as a contract that have to be fulfilled in implementing classes. Moreover, Interface is used for achieving multiple inheritance in java as we can implement multiple interface separated by comma.
 Example:
 ```java
 interface Software{
