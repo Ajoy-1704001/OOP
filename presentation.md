@@ -268,6 +268,8 @@ When same object shows different forms and behaviour, we refer this as polymorph
 1. Static Polymorphism
 2. Dynamic Polymorphism
 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/9f81c43d-3113-4ef2-ba4e-e14f74cd21c1" width=30% height=30%> 
+
 Example: We have "Mobile" class and two derived class such as "Iphone" and "Pixel". "Mobile" class contains a method "showMessage()" which is inherited by both the derived classes. But each of the derived class have different message to show. So, they overrides the message.
 ```java
 class Mobile{
