@@ -58,9 +58,9 @@ Here, we can see that protected member **display()** from package mobile can not
 
 **Default:** If we do not declare any access modifier, then it is considered as default modifier. It has similarity with protected modifier, but it can't be accessed through inherited class.
 
-<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/9ac1b25f-2908-4a39-a775-1f203a6f772b" width=70% height=60%> 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/fef1b4b9-f660-44ae-8159-c4e224ab7e55" width=70% height=60%> 
 
->Image Reference: [Java – What are Access Modifiers? - Simple2Code](https://simple2code.com/java/access-modifiers-in-java/)
+>Image Reference: [(Access Modifiers in Java)](https://www.baeldung.com/java-access-modifiers)
 
 
 ## Fundamental Principle of OOP
