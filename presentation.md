@@ -70,7 +70,10 @@ Here, we can see that protected member **display()** from package mobile can not
 
 >Image Reference: [Educative](https://www.educative.io/) 
 
-Let's think about a capsule. It is a unit which contains and binds all of it's important elements. We don't know the inside material of it. In OOP, we can think class as a capsule which binds data members and methods together so that we can control the access right of the data members. When we encapsulate a class, objects of other class needs special requirement to access the data. That special requirement depends on the access modifier. By convention, we use private access modifier for data members so that objects from other class can't access it.
+- It is a unit which contains and binds all of it's important elements. We don't know the inside material of it.
+- In OOP, we can think class as a capsule which binds data members and methods together so that we can control the access right of the data members.
+- When we encapsulate a class, objects of other class needs special requirement to access the data. That special requirement depends on the access modifier.
+- By convention, we use private access modifier for data members so that objects from other class can't access it.
 Example:
 ```java
 public class Human {
@@ -102,7 +105,6 @@ public class Human {
     } 
 }
 ```
-In this case, we can't directly access any data member from other classes. We must use public methods(for above example, getter/setter) if want any specific data. Another example: NSL have some confidential employee data which you want to access. As per rule, you can't access the data directly. You must get it through any of the official persons. So these official person working here as a public methods.
 
 ### - Why do we need private variables?
 
@@ -137,9 +139,6 @@ class User{
     }
 }
 ```
-As we can see, user password is manipulated from main class which leads to unsuccessful authentication. If we declare these variable private, these variable can be only accessible inside it's own class. So, it ensures data integrity. It is also a representaion of encapsulation.
-So, above example can clearly identifies the need of private variables.
-
 
 ### Abstraction
 Suppose, we want to provide a button to user which increase the brightness of the device. User only know that the button increases brightness. But, they don't know how it actually worked in the background. Because, we don't want user to know what is behind the functionality. This is known as Abstraction. Example: In Java, List, Math, Stack, etc. are Abstract Data Type.
