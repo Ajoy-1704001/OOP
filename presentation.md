@@ -104,6 +104,43 @@ public class Human {
 ```
 In this case, we can't directly access any data member from other classes. We must use public methods(for above example, getter/setter) if want any specific data. Another example: NSL have some confidential employee data which you want to access. As per rule, you can't access the data directly. You must get it through any of the official persons. So these official person working here as a public methods.
 
+### - Why do we need private variables?
+
+Suppose, we have a login system where user is authenticated by it's username and password. We create a class **User** which have two member variables **username** and **password**. We declare the variables as public. As a result, any other class can easily access the sensitive user information. 
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        User user1 = new User("ajoy","12345");
+        
+        user1.login("ajoy","12345"); //"Logged in Successfully"
+        user1.password = "54321";
+        user1.login("ajoy","12345"); //"Login not Successful"
+    }
+}
+class User{
+    public String userName;
+    public String password;
+    
+    public User(String theUserName, String thePassword){
+        userName = theUserName;
+        password = thePassword;
+    }
+    
+    public void login(String theUserName, String thePassword){
+        //functionality
+        if(userName.equals(theUserName) && password.equals(thePassword)){
+            System.out.println("Logged in Successfully");   
+        }else{
+            System.out.println("Login not Successful");   
+        }
+    }
+}
+```
+As we can see, user password is manipulated from main class which leads to unsuccessful authentication. If we declare these variable private, these variable can be only accessible inside it's own class. So, it ensures data integrity. It is also a representaion of encapsulation.
+So, above example can clearly identifies the need of private variables.
+
+
 ### Abstraction
 Suppose, we want to provide a button to user which increase the brightness of the device. User only know that the button increases brightness. But, they don't know how it actually worked in the background. Because, we don't want user to know what is behind the functionality. This is known as Abstraction. Example: In Java, List, Math, Stack, etc. are Abstract Data Type.
 ```java
@@ -134,71 +171,9 @@ public class Abstraction {
     }
 }
 ```
-
-### Difference between Abstract class and Interface
-Abstract class is a class that can not have it's own object, but it can be inherited by other concrete classes and those subclass can have their object. If the subclass is a regular class, then we must implement all the abstract methods. Otherwise, it will generate compilation error. If the subclass is also an abstract class, then there is no need to implement all the abstract methods. Abstract class can have non-abstract methods and their body implementation. Abstract class can also have constructor. As abstract class can contain both abstract and regular methods, we can not achieve 100% abstraction using abstraction.
-Example: (Using Abstract class)
-```java
-public class Main
-{
-    public static void main(String[] args) {
-        System.out.println("Welcome to Online IDE!! Happy Coding :)");
-        Chip device = new Iphone();
-        device.play();
-        device.stop();
-    }
-}
-
-abstract class Chip{
-    public abstract void play();
-    public abstract void waiting();
-    public void stop(){
-        System.out.println("Bye!");
-    }
-}
-
-class Iphone extends Chip{
-    public void play(){
-        System.out.println("Welcome!");
-    }
-    public void waiting(){
-        System.out.println("waiting!");
-    }
-}
-```
-Interface class can not have it's own object like abstract class. Regular and abstract classes can implement interfaces (even more than one). If the subclass is regular class, then it is a must to implement all the methods inside subclass. If the subclass is abstract class, then it is not mandatory to implement all the methods. The other subclass that inherits the abstract class, it's his duty to implement all the methods. Interface can't have constructor and methods can't be declared as private. Interface can also have static or default methods with it's implementation. Interface can have static/constant attributes.
-Example: (Using Interface)
-```java
-public class Main
-{
-    public static void main(String[] args) {
-        System.out.println("Welcome to Online IDE!! Happy Coding :)");
-        Chip device = new Iphone();
-        device.play();
-        device.stop();
-    }
-}
-
-interface Chip{
-    public void play();
-    public void waiting();
-    public default void stop(){
-        System.out.println("Bye!");
-    }
-}
-
-class Iphone implements Chip{
-    public void play(){
-        System.out.println("Welcome!");
-    }
-    public void waiting(){
-        System.out.println("waiting!");
-    }
-}
-```
-
 ### - When to use Abstract Class:
 As we know, Abstract class can have concrete methods along with abstract ones. That means we can have non-abstract methods with full implementation inside an abstract class. Example: 
+
 ```java
 public class Main
 {
@@ -469,42 +444,6 @@ On the other hand, **Pixel** and **Iphone** class both have implemented the **sh
 
 So, the conclusion is Encapsulation hides object details by controlling access and Abstraction creates higher level abstract view for user to tell what the object does.
 
-
-## 2. Why do we need private variables?
-
-Suppose, we have a login system where user is authenticated by it's username and password. We create a class **User** which have two member variables **username** and **password**. We declare the variables as public. As a result, any other class can easily access the sensitive user information.
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        User user1 = new User("ajoy","12345");
-        
-        user1.login("ajoy","12345"); //"Logged in Successfully"
-        user1.password = "54321";
-        user1.login("ajoy","12345"); //"Login not Successful"
-    }
-}
-class User{
-    public String userName;
-    public String password;
-    
-    public User(String theUserName, String thePassword){
-        userName = theUserName;
-        password = thePassword;
-    }
-    
-    public void login(String theUserName, String thePassword){
-        //functionality
-        if(userName==theUserName && password==thePassword){
-            System.out.println("Logged in Successfully");   
-        }else{
-            System.out.println("Login not Successful");   
-        }
-    }
-}
-```
-As we can see, user password is manipulated from main class which leads to unsuccessful authentication. If we declare these variable private, these variable can be only accessible inside it's own class. So, it ensures data integrity. It is also a representaion of encapsulation.
-So, above example can clearly identifies the need of private variables.
 
 
 ## 3. Why we need getter and setter?
