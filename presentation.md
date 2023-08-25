@@ -235,7 +235,7 @@ Moreover, Abstraction can't be used for multiple inheritance, because we can't e
 
 ### - When to use Interface
 
-<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/a8452f81-a271-45c3-8397-d9dd4a263ec7" width=30% height=30%> 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/a8452f81-a271-45c3-8397-d9dd4a263ec7" width=40% height=40%> 
 
 Interface are more likely to hide unneccessary details and only show the important details of an object. Due to the advancement of java, now-a-days, interface can also have default methods. But most of the cases, interface is used as a contract that have to be fulfilled in implementing classes. Moreover, Interface is used for achieving multiple inheritance in java as we can implement multiple interface separated by comma.
 Example:
@@ -268,7 +268,7 @@ When same object shows different forms and behaviour, we refer this as polymorph
 1. Static Polymorphism
 2. Dynamic Polymorphism
 
-<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/9f81c43d-3113-4ef2-ba4e-e14f74cd21c1" width=30% height=30%> 
+<img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/9f81c43d-3113-4ef2-ba4e-e14f74cd21c1" width=50% height=30%> 
 
 Example: We have "Mobile" class and two derived class such as "Iphone" and "Pixel". "Mobile" class contains a method "showMessage()" which is inherited by both the derived classes. But each of the derived class have different message to show. So, they overrides the message.
 ```java
