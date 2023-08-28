@@ -2,8 +2,9 @@
 Object Oriented Programming (OOP) is a programming paradigm that can model real world scenarios using class and object. Class and Object are the two main buddies of Object Oriented Programming.
 
 ## Class & Object
-Class can be think as a blueprint or building block. It consists of data members and some functions. Example: Mobile can be considered as a class which have attributes like brand name, color, version etc. and functionalities are calculating, taking picture, calling, messaging etc. As said before, we can model anything around us using object oriented programing.
-If class is the definition of our model, then objects are the instance of the model. Objects are physical entity that contains data attribute and it's own functionality. Object needs class to follow the blueprint. When we create an instance of the object, it occupies some memory. Without creating object, class is useless. Example: Iphone 10, Pixel 6, Huwaei pro, etc. are the objects of Mobile class. Audi, Nissan, Volvo, etc. are object of Car class.
+- Class can be think as a blueprint or building block. It consists of data members and some functions. As said before, we can model anything around us using object oriented programing.
+- If class is the definition of our model, then objects are the instance of the model. Objects are physical entity that contains data attribute and it's own functionality.
+- When we create an instance,, it occupies some memory. Without creating object, class is useless. Example: Iphone 10, Pixel 6, Huwaei pro, etc. are the objects of Mobile class. Audi, Nissan, Volvo, etc. are object of Car class.
 
 <img src="https://github.com/Ajoy-1704001/OOP/assets/57573642/67601eed-8b99-431d-a489-0f15b2eee670" width=70% height=60%> 
 
